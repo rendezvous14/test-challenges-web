@@ -204,7 +204,8 @@ For **Web UI test case**, See the [Guidline](test-automation/test_1.md) to walkt
 
 #### Test Case#2 RESTful API
 1. Create a test scripts to get the value from this endpoint
-https://api.go.exchange/exchange/ticker
+
+    https://api.go.exchange/exchange/ticker
 
 2. Then write the value to log file or log to console as markdown format.
     ```
