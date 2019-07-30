@@ -22,5 +22,5 @@
 7. Try to make an order eventhough there is 0 balance Basically the amount and total will be calculated automatically and there will be warning message if the amount or total is above the balance.
 ![Alt text](img/test-challenges-5.png?raw=true "Title")
 
-8. If user attempt to make an order. There will be notification message about insufficient balance.
+8. If user attempt to make an order. There will be notification message about you are not logged in yet.
 ![Alt text](img/test-challenges-7.png?raw=true "Title")
