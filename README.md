@@ -13,7 +13,7 @@ There are 2 sections to be completed:
 - [Test Automation](#section-2-test-automation)
 
 
-### Section 1: Test Strategies
+## Section 1: Test Strategies
 
 #### Scenario
 The Food Delivery services can take the order online. The delivery charge will be calculated depends on number of boxes, total price, range, vehicle type to delivery and service chages. The customer will get the discount of delivery fee for first 15 kilometers if user order food more than $200 and more than 15 kilometers will be calculated as usual.
@@ -161,7 +161,7 @@ You are a QA who has contracts to test **Food Delivery Charge**
 - [ ] Explain how to test or technique you use to create the test scenarios in brief
 - [ ] Propose the test cases from your test plan that should be covered by Automation Testing and why you selected those test cases
 
-### Section 2: Test Automation
+## Section 2: Test Automation
 
 #### Scenario
 GO.Exchange is the crypto-currencies Exchange platform for crypto traders. We provide the 24x7 services to operate orders matching engine. We have been implementing 10++ pairs of currencies such as BTC-USDC, OMG-BTC, LTC-USDC and etc.. to serve the traders's purpose.
@@ -215,5 +215,16 @@ For **Web UI test case**, See the [Guidline](test-automation/test_1.md) to walkt
 #### Mission
 - [ ] Follow the requirement on both Web UI and API testing
 - [ ] Write the automate test scripts the execution the test cases.
-- [ ] Share both the actual code to github repository 
-- [ ] Explain how to setup the tools and how to run the test cases clearly
+
+---
+
+### Surprise us!
+Ready to surprise us what you have done? 
+- Push the test plan and automation testing code to github repository and share us the link
+- Explain how to setup the tools and how to run the test cases clearly
+
+We are looking for your submission. We will arrange the face-to-face interview once you are passed the challenges.
+
+**Let's rock!** 🤘
+![Alt text](test-automation/img/robot.png?raw=true "QA Engineer")
+Image by <a href="https://pixabay.com/users/Tabble-989840/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2192617">Tabble</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2192617">Pixabay</a>
