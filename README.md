@@ -226,5 +226,7 @@ Ready to surprise us what you have done?
 We are looking for your submission. We will arrange the face-to-face interview once you are passed the challenges.
 
 **Let's rock!** 🤘
+
 ![Alt text](test-automation/img/robot.png?raw=true "QA Engineer")
+
 Image by <a href="https://pixabay.com/users/Tabble-989840/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2192617">Tabble</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2192617">Pixabay</a>
