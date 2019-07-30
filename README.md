@@ -168,12 +168,6 @@ GO.Exchange is the crypto-currencies Exchange platform for crypto traders. We pr
 
 QA Engineer team need to ensure the quality by manual testing and convert them to automation test scripts because there are a lot of features and new pairs of currencies will be released weekly.
 
-#### Mission
-- [ ] Follow the test cases both UI and API testing
-- [ ] Write a script to automate the execution of the above script.
-- [ ] Share both the actual code to github and share your reposistory 
-- [ ] Explain how to setup the tools and how to run the test cases clearly
-
 #### Handicap
 For **Web UI test case**, See the [Guidline](test-automation/test_1.md) to walkthrough GO.Exchange platform (only the feature we are going to cover the automation testing)
 
@@ -217,3 +211,9 @@ For **Web UI test case**, See the [Guidline](test-automation/test_1.md) to walkt
     ...
     | USDCDAI | 0.9929 | 38.203323 |
     ```
+
+#### Mission
+- [ ] Follow the requirement on both Web UI and API testing
+- [ ] Write the automate test scripts the execution the test cases.
+- [ ] Share both the actual code to github repository 
+- [ ] Explain how to setup the tools and how to run the test cases clearly
