@@ -214,7 +214,9 @@ For **Web UI test case**, See the [Guidline](test-automation/test_1.md) to walkt
 
 #### Mission
 - [ ] Follow the requirement on both Web UI and API testing
-- [ ] Write the automate test scripts the execution the test cases.
+- [ ] Write the automate test scripts the execution the test cases. 
+
+🤖 **Feel free to use any language or scripts which is easy for you.** 🤖
 
 ---
 
@@ -227,6 +229,6 @@ We are looking for your submission. We will arrange the face-to-face interview o
 
 **Let's rock!** 🤘
 
-![Alt text](test-automation/img/robot.png?raw=true "QA Engineer")
+![Alt text](test-automation/img/robot1.png?raw=true "QA Engineer")
 
 Image by <a href="https://pixabay.com/users/Tabble-989840/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2192617">Tabble</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2192617">Pixabay</a>
