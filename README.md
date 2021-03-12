@@ -210,6 +210,7 @@ For **Web UI test case**, See the [Guidline](test-automation/test_1.md) to walkt
     https://public-api.zipmex.net/api/v1.0/summary
 
 2. Then write the value to log file or log to console as markdown format.
+
 ```
 Zipmex market cap
 | instrument | last_price | lowest_24hr | highest_24hr |
@@ -219,6 +220,7 @@ Zipmex market cap
 ...
 | USDT_GOLD  |   57.1     |           0 |            0 |
 ```
+
 #### Mission
 - [ ] Follow the requirement on both Web UI and API testing
 - [ ] Write the automate test scripts the execution the test cases. 
