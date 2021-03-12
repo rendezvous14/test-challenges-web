@@ -210,14 +210,15 @@ For **Web UI test case**, See the [Guidline](test-automation/test_1.md) to walkt
     https://public-api.zipmex.net/api/v1.0/summary
 
 2. Then write the value to log file or log to console as markdown format.
-    ```
-    Zipmex market cap
+
+```
+Zipmex market cap
 | instrument | last_price | lowest_24hr | highest_24hr |
 |:-----------|-----------:|------------:|-------------:|
-| USD_BTC    |     56713.76 |  56575.22 |  57805.27            |
-| USD_ZMT    |    1.2568 | 1.2302 |  |1.2568 |
+| USD_BTC    |56713.76    |56575.22     |57805.27      |
+| USD_ZMT    | 1.2568     | 1.2302      |1.2568        |
 ...
-| USDT_GOLD | 57.1 | 0 | 0 |
+| USDT_GOLD  |   57.1     |           0 |            0 |
 ```
 
 #### Mission
