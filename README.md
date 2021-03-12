@@ -5,7 +5,7 @@
 </p>
 <br />
 
-## Test challenge for GO.Exchange QA Engineer
+## Test challenge for Zipmex QA Engineer
 
 There are 2 sections to be completed:
 
@@ -164,59 +164,69 @@ You are a QA who has contracts to test **Food Delivery Charge**
 ## Section 2: Test Automation
 
 #### Scenario
-GO.Exchange is the crypto-currencies Exchange platform for crypto traders. We provide the 24x7 services to operate orders matching engine. We have been implementing 10++ pairs of currencies such as BTC-USDC, OMG-BTC, LTC-USDC and etc.. to serve the traders's purpose.
+https://trade.zipmex.com/trade/BTCUSD is the crypto-currencies Exchange platform for crypto traders. We provide the 24x7 services to operate orders matching engine. We have been implementing 10++ pairs of currencies such as BTCUSD, ZMTUSD, USDTUSD and etc.. to serve the traders's purpose.
 
 QA Engineer team need to ensure the quality by manual testing and convert them to automation test scripts because there are a lot of features and new pairs of currencies will be released weekly.
 
 #### Handicap
-For **Web UI test case**, See the [Guidline](test-automation/test_1.md) to walkthrough GO.Exchange platform (only the feature we are going to cover the automation testing)
+For **Web UI test case**, See the [Guidline](test-automation/test_1.md) to walkthrough Zipmex Exchange platform (only the feature we are going to cover the automation testing)
 
 #### Test Case#1 Web UI
-1. Select a market selector which only has price (not equal to 0)
+1. Select a Instrument `USDTUSD`
 2. Get the best price to buy. Then adjust the price a bit 
     - new price = price + 0.1%
 
 3. Input amount = 1.00
-4. Click on Buy button and check the result.
- 
-    **Expected Result** The warning message should be as follows:
+4. Get the Total (USD) value
+5. Then save the value into a variable and print into the console
+
+    **Expected Result** 
     ```
-    Error! You are not logged in. 
-    Please log in to create an order
+    Trade USDTUSD 
+    with side = buy
+    with price = xxx.xxx 
+    with amount = 1.00
+    Total (USD) = xxx.xxx
     ```
 
-5. Switch to sell side. Get the best price to sell. Then adjust the price a bit
+6. Switch to sell side. Get the best price to sell. Then adjust the price a bit
     - new price = price - 0.1%
-6. Input amount = 1.00
-7. Click on Buy button and check the result.
- 
-    **Expected Result** The warning message should be as follows:
+7. Input amount = 1.00
+8. Get the Total (USD) value
+9. Then save the total value into a variable and print into the console
+
+    **Expected Result** 
     ```
-    Error! You are not logged in. 
-    Please log in to create an order
+    Trade USDTUSD 
+    with side = sell
+    with price = xxx.xxx 
+    with amount = 1.00
+    Total (USD) = xxx.xxx
     ```
 
 #### Test Case#2 RESTful API
-1. Create a test scripts to get the value from this endpoint
+1. Create a automation test scripts to get the value from this API endpoint:
 
-    https://api.go.exchange/exchange/ticker
+    https://public-api.zipmex.net/api/v1.0/summary
 
 2. Then write the value to log file or log to console as markdown format.
     ```
-    GO.Exchange market cap
-    | symbol  | last_price | volume_24h |
-    |:--------|--------:|--------:|
-    | BCHUSDC |  306.82 | 11.5113384 |
-    | BTCUSDC | 9499.21 | 18.37045817 |
-    ...
-    | USDCDAI | 0.9929 | 38.203323 |
-    ```
+    Zipmex market cap
+| instrument | last_price | lowest_24hr | highest_24hr |
+|:-----------|-----------:|------------:|-------------:|
+| USD_BTC    |     56713.76 |  56575.22 |  57805.27            |
+| USD_ZMT    |    1.2568 | 1.2302 |  |1.2568 |
+...
+| USDT_GOLD | 57.1 | 0 | 0 |
+```
 
 #### Mission
 - [ ] Follow the requirement on both Web UI and API testing
 - [ ] Write the automate test scripts the execution the test cases. 
 
-🤖 **Feel free to use any language or scripts which is easy for you.** 🤖
+🤖 **Feel free to use any language or scripts which is easy for you. 
+
+recommended Javascript!** 🤖
 
 ---
 
@@ -230,5 +240,8 @@ We are looking for your submission. We will arrange the face-to-face interview o
 **Let's rock!** 🤘
 
 ![Alt text](test-automation/img/robot1.png?raw=true "QA Engineer")
+
+[![Gauge Badge](https://gauge.org/Gauge_Badge.svg)](https://gauge.org)
+
 
 Image by <a href="https://pixabay.com/users/Tabble-989840/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2192617">Tabble</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2192617">Pixabay</a>
