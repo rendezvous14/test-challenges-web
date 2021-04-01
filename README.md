@@ -1,6 +1,6 @@
 <p align="center">
-  <a href='https://zipmex.co.th'>
-    <img src="https://zipmex.co.th/static/324e5b26abe432a5551b4af777f1fce7/47498/Banner-10-02.jpg" width="300" />
+  <a href='https://zipmex.com/th'>
+    <img src="https://zipmex.com/static/4191f5f81ee3959e88822df4f385e7e5/hero-home.svg" width="300" />
   </a>
 </p>
 <br />
