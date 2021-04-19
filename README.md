@@ -226,7 +226,8 @@ Zipmex market cap
 
 #### Mission
 - [ ] Follow the requirement on both Web UI and API testing
-- [ ] Write the automate test scripts the execution the test cases. 
+- [ ] Write the automate test scripts the execution the test cases.
+- [ ] Compose the README how to setup the tool and run the test automation scripts (deponds on your submittion tools). Let's say we would like to share it to anyone who doesn't have background.
 
 🤖 **Feel free to use any language or scripts which is easy for you. 
 
