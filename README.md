@@ -3,7 +3,7 @@
 </p>
 <p align="center">
   <a href='https://zipmex.com/en'>
-    <img src="https://zipmex.com/static/4191f5f81ee3959e88822df4f385e7e5/hero-home.svg" width="300" />
+    <img src="https://zipmex.com/static/46668043c8bae4d941d2699f233078f1/THB.png" width="300" />
   </a>
 </p>
 <br />
