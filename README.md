@@ -18,80 +18,77 @@ There are 2 sections to be completed:
 
 ## Section 1: Test Strategies
 
-#### Scenario
-The Food Delivery services can take the order online. The delivery charge will be calculated depends on number of boxes, total price, range, vehicle type to delivery and service chages. The customer will get the discount of delivery fee for first 15 kilometers if user order food more than $200 and more than 15 kilometers will be calculated as usual.
+### Scenario
+The Food Delivery services can take the order online. 
+The `delivery_charge` will be calculated depends on number of `boxes`, `box_price`, `distance`,`vehicle_type` to deliver 
+and `service_charges`. The customer will get the `discount` on the `delivery_charge` for first 15 kilometers, 
+if user order food (`box_price`) more than $200. `delivery_charge` for the remaining distance above 15 kilometers will be calculated as usual.
 
-#### Index Formula
-Delivered vehicle type will be selected by calculating with number of order.
+### Vehicle Type Index Formula
+`vehicle_type` to deliver will be selected automatically by calculating from number of `boxes`.
 
-- BIKE if Index < 40
+- Select 'BIKE' if total box index < 40
 
-- CAR if Index >= 40
+- Select 'CAR' if total box index >= 40
 
     When
     
-- Meal box = 1.3 per box
+- `Meal box` index = 1.3 per box
 
-- Dessert box = 1 per box
+- `Dessert box` index = 1 per box
+
 
 **Examples**
-1. Ordered 20 x Meal Boxes and 10 x Dessert Boxes
+1. Ordered 20 x `Meal Box` and 10 x `Dessert Box`
 
     Index = (20 * 1.3) + 10 = 36
 
     Then select **'BIKE'** for delivery
 
-2. Ordered 20 x Meal Boxes and 14 x Dessert Boxes
+2. Ordered 20 x `Meal Box` and 14 x `Dessert Box`
 
     Index = (20 * 1.3) + 20 = 40
 
     Then select **'CAR'** for delivery
 
-3. Ordered 15 x Meal Boxes and 20 x Dessert Boxes
+3. Ordered 15 x `Meal Box` and 20 x `Dessert Box`
 
     Index = (15 * 1.3) + 20 = 39.5 then ROUNDUP to 40
 
     Then select **'CAR'** for delivery
 
-#### Delivery Charge Formula
+
+### Delivery Charge Formula
 1. BIKE
-
-    Started at $10
-
-    Distance between 0 - 30 Kilometers = $7.2 / Kilometers
-
-    Distance above 31 Kilometers = $14 / Kilometers
-
-    Delivery Charge will be included 10%
+   - starts at $10
+   - charge for distance between 0 - 30 Kilometers = $7.2 / Kilometers
+   - charge for istance above 31 Kilometers = $14 / Kilometers
+   - includes 10% `service_charge` 
 
 
 2. CAR
+   - starts at $20
+   - charge for any distance (1 rate) = $12 / Kilometers
+   - includes 10% `service_charge`
 
-    Started at $20
+### Discount
+1. If customer orders with total `box_price` >= $200
+   - `delivery_charge` will be fully deducted for the `distance` between 0 - 15 kilometers
+   - `delivery_charge` for the remaining `distance` above 15 kilometers will be calculated as usual
+   - `discount` includes 10% `service_charge` (yes!)
 
-    Every distance (1 rate) = $12 / Kilometers
+2. If customer orders with total `box_price` < $200
+   - `delivery_charge` will be calculated as usual without discount offer
 
-    Delivery Charge will be included 10%
+Note that the total `box_price` can be based on assumption, you do not need to worry about how different ordered food boxes sum up to certain price.
 
-#### Discount
-1. If customer orders + Delivery fee >= $200
+### How Service Works
 
-    Deliver charge will be deducted from distance between 0 - 15 kilometers
-    
-    Deliver charge above 15 kilometers will be calculated as usual
+**Example #1**
 
-2. If customer orders + Delivery fee < $200
-
-    Deliver charge will be calculated as usual without discount offer
-
-
-#### How logic works
-
-**Example#1**
-
-- Ordered 20 x Meal Boxes and 14 x Dessert Boxes
-- The price of Meal boxes = $210 
-- Distance from restaurant to destination = 20 kilometers
+- Ordered 20 x `Meal Box` and 14 x `Dessert Box`
+- The total `box_price` = $210 
+- `distance` from restaurant to destination = 20 kilometers
 
     ```
     1. Index = 20 * 1.3 = 36
@@ -108,11 +105,11 @@ Delivered vehicle type will be selected by calculating with number of order.
     Total Delivery charges = 170 - 130 = $40
     ```
 
-**Example#2**
+**Example #2**
 
-- Ordered 20 x Meal Boxes and 14 x Dessert Boxes
-- The price of Meal and Dessert boxes = $500
-- Distance from restaurant to destination = 20 kilometers
+- Ordered 20 x `Meal Box` and 14 x `Dessert Box`
+- The total `box_price` = $500
+- `distance` from restaurant to destination = 20 kilometers
 
     ```
     1. Index = (20 * 1.3) + 14 = 40
@@ -129,11 +126,11 @@ Delivered vehicle type will be selected by calculating with number of order.
     Total Delivery charges = 286 - 210 = $76
     ```
 
-**Example#3**
+**Example #3**
 
-- Ordered 38 x Dessert Boxes
-- The price of Meal and Dessert boxes = $199
-- Distance from restaurant to destination = 32 kilometers
+- Ordered 38 x `Dessert Box`
+- The total `box_price` = $199
+- `distance` from restaurant to destination = 32 kilometers
 
     ```
     1. Index = 38
@@ -157,25 +154,32 @@ Delivered vehicle type will be selected by calculating with number of order.
     Total Delivery charges = $275
     ```
 
-#### Mission
+### Mission
 You are a QA who has contracts to test **Food Delivery Charge**
 - [ ] Create a test plan with as much detail as possible. (Prefer Excel or google sheet format). Think of various scenarios that need testing.
-- [ ] Estimation time to test your test scenaiors 
-- [ ] Explain how to test or technique you use to create the test scenarios in brief
-- [ ] Propose the test cases from your test plan that should be covered by Automation Testing and why you selected those test cases
+- [ ] Estimate the time required to test your scenarios (for cases you think cannot be automated).
+- [ ] Explain how to test, the approach, or the technique you use, to come up with these test scenarios in brief.
+- [ ] From your test scenarios, propose test automation plan. You can answer based on the following key ideas: 
+      - what are the cases you want to automate, and what kind of test will you call it,
+      - where (or at which points) in SDLC/CICD do you want to automate,
+      - what is your test environment and/or dependencies you think needs to be controlled.
 
 ## Section 2: Test Automation
 
-#### Scenario
-https://trade.zipmex.com/trade/BTCUSD is the crypto-currencies Exchange platform for crypto traders. We provide the 24x7 services to operate orders matching engine. We have been implementing 10++ pairs of currencies such as BTCUSD, ZMTUSD, USDTUSD and etc.. to serve the traders's purpose.
+### Scenario
+https://trade.zipmex.com/trade/BTCUSD is the crypto-currencies Exchange platform for crypto traders. 
+We provide the 24x7 services to operate orders matching engine. 
+We have been implementing 10++ pairs of currencies such as BTCUSD, ZMTUSD, USDTUSD and etc.. to serve the traders' purpose.
 
-QA Engineer team need to ensure the quality by manual testing and convert them to automation test scripts because there are a lot of features and new pairs of currencies will be released weekly.
+QA Engineer team need to ensure the quality by manual testing and convert them to automation test scripts,
+because there are a lot of features and new pairs of currencies to be released weekly.
 
-#### Handicap
-For **Web UI test case**, See the [Guidline](test-automation/test_1.md) to walkthrough Zipmex Exchange platform (only the feature we are going to cover the automation testing)
+#### Background on Zipmex Trade Website
+For **Web UI test case**, See the [Guidline](test-automation/test_1.md) to walkthrough Zipmex Exchange platform 
+(This is the only UI feature we are going to cover in this "Section 2: Test Automation")
 
-#### Test Case#1 Web UI
-1. Select a Instrument `USDTUSD`
+### Test Case #1 Web UI
+1. Select a Instrument `USDT/USD`
 2. Get the best price to buy. Then adjust the price a bit 
     - new price = price + 0.1%
 
@@ -207,12 +211,12 @@ For **Web UI test case**, See the [Guidline](test-automation/test_1.md) to walkt
     Total (USD) = xxx.xxx
     ```
 
-#### Test Case#2 RESTful API
-1. Create a automation test scripts to get the value from this API endpoint:
+### Test Case #2 RESTful API
+1. Create an automation test scripts to get the value from this API endpoint:
 
     https://public-api.zipmex.net/api/v1.0/summary
 
-2. Then write the value to log file or log to console as markdown format.
+2. Then write the value to log file, or log to console, as Markdown format.
 
 ```
 Zipmex market cap
@@ -226,8 +230,9 @@ Zipmex market cap
 
 #### Mission
 - [ ] Follow the requirement on both Web UI and API testing
-- [ ] Write the automate test scripts the execution the test cases.
-- [ ] Compose the README how to setup the tool and run the test automation scripts (deponds on your submittion tools). Let's say we would like to share it to anyone who doesn't have background.
+- [ ] Write automation scripts and make sure the test cases execute correctly.
+- [ ] Compose the README of the required set up and how to run your test automation scripts (depends on tools/framework you submitted). 
+  Let's say we would like to share it to anyone who does not have background.
 
 🤖 **Feel free to use any language or scripts which is easy for you. 
 
