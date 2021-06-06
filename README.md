@@ -25,7 +25,7 @@ and `service_charges`. The customer will get the `discount` on the `delivery_cha
 if user order food (`box_price`) more than $200. `delivery_charge` for the remaining distance above 15 kilometers will be calculated as usual.
 
 ### Vehicle Type Index Formula
-`vehicle_type` to deliver will be selected automatically by calculating from number of `boxes`.
+`vehicle_type` to deliver will be selected automatically by calculating index of the `boxes` count.
 
 - Select 'BIKE' if total box index < 40
 
