@@ -160,9 +160,9 @@ You are a QA who has contracts to test **Food Delivery Charge**
 - [ ] Estimate the time required to test your scenarios (for cases you think cannot be automated).
 - [ ] Explain how to test, the approach, or the technique you use, to come up with these test scenarios in brief.
 - [ ] From your test scenarios, propose test automation plan. You can answer based on the following key ideas: 
-      - what are the cases you want to automate, and what kind of test will you call it,
-      - where (or at which points) in SDLC/CICD do you want to automate,
-      - what is your test environment and/or dependencies you think needs to be controlled.
+  - what are the cases you want to automate, and what kind of test will you call it,
+  - where (or at which points) in SDLC/CICD do you want to automate,
+  - what is your test environment and/or dependencies you think needs to be controlled.
 
 ## Section 2: Test Automation
 
