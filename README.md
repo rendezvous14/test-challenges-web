@@ -73,9 +73,9 @@ if user order food (`box_price`) more than $200. `delivery_charge` for the remai
 
 ### Discount
 1. If customer orders with total `box_price` >= $200
-   - `delivery_charge` will be fully deducted for the `distance` between 0 - 15 kilometers
+   - `discount` will deduct the `delivery_charge` for `distance` between 0 - 15 kilometers
    - `delivery_charge` for the remaining `distance` above 15 kilometers will be calculated as usual
-   - `discount` includes 10% `service_charge` (yes!)
+   - `discount` includes 10% `service_charge` before deduction (yes!)
 
 2. If customer orders with total `box_price` < $200
    - `delivery_charge` will be calculated as usual without discount offer
